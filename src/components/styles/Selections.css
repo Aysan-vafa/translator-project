@@ -1,0 +1,23 @@
+.custom-select {
+    position: relative;
+    display: inline;
+}
+.custom-select select{
+    display: none;
+}
+
+.custom-select::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -5px;
+    border: 5px solid transparent;
+    border-color: darkgreen transparent transparent transparent;
+    pointer-events: none;
+}
+
+.custom-select select:focus
++ .custom-select::after{
+    border-color: darkblue transparent transparent transparent ;
+}

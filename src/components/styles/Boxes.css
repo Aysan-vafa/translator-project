@@ -1,0 +1,15 @@
+.custom-textarea {
+    border: 1px solid gray;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    text-align: right; 
+}
+
+
+.custom-textarea::placeholder {
+    color: gray;
+    opacity: 1;
+    text-align: right;
+}
