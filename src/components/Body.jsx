@@ -9,7 +9,7 @@ export default function Body() {
   const [TargetLanguage, setTargetLanguage] = useState('fra_Latn');
   const [InputText, setInputText] = useState('');
   const [OutputText, setOutputText] = useState('');
-  const apiToken = '95fe641b7988211661ae02b5ef9fb10c53db71ce'; // توکن API خود را اینجا قرار دهید
+  const apiToken = '95fe641b7988211661ae02b5ef9fb10c53db71ce';
 
   const handleTranslate = async () => {
     try {
@@ -17,7 +17,7 @@ export default function Body() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Token ${apiToken}`, // اضافه کردن توکن به هدر
+          'Authorization': `Token ${apiToken}`,
         },
         body: JSON.stringify({
           text: InputText,
@@ -31,7 +31,7 @@ export default function Body() {
       }
 
       const data = await response.json();
-      setOutputText(data.translation_text); // فرض بر این است که API متن ترجمه شده را در این کلید برمی‌گرداند
+      setOutputText(data.translation_text); 
     } catch (error) {
       console.error('Error translating text:', error);
     }
