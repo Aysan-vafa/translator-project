@@ -1,7 +1,7 @@
 import SourceLanguageSelector from "./SourceLanguageSelector"
 import TargetLanguageSelector from "./TargetLanguageSelector"
 import TranslateButton from "./TranslateButton";
-import InputBox from "./inputBox";
+import InputBox from "./InputBox";
 import OutputBox from "./OutputBox";
 import React,{useState} from "react";
 export default function Body() {
@@ -31,7 +31,7 @@ export default function Body() {
       }
 
       const data = await response.json();
-      setOutputText(data.translation_text); 
+      setOutputText(data.translation_text);
     } catch (error) {
       console.error('Error translating text:', error);
     }
